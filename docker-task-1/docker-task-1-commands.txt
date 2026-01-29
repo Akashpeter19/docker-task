@@ -1,0 +1,21 @@
+docker --version
+
+docker images
+docker pull nginx
+docker images
+
+docker run -d --name my-nginx -p 8080:80 nginx
+docker ps
+docker ps -a
+
+docker volume create my-volume
+docker volume ls
+docker volume inspect my-volume
+
+docker network ls
+docker network create my-network
+docker network ls
+
+docker stop my-nginx
+docker rm my-nginx
+docker ps -a
