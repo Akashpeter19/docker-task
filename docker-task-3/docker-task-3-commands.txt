@@ -1,0 +1,9 @@
+docker build -t akashpeter/nginx-custom .
+docker tag akashpeter/nginx-custom:latest app19/nginx-custom:v1
+docker login
+docker push app19/nginx-custom:v1
+docker-compose up -d
+docker ps
+docker exec -it docker-task-3-web-1 ls /var/opt/nginx
+docker pull app19/nginx-custom:v1
+

@@ -1,0 +1,8 @@
+services:
+  web:
+    image: akashpeter/nginx-custom:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/var/opt/nginx
+
