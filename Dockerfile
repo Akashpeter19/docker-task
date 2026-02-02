@@ -1,7 +1,7 @@
-FROM node:20
+FROM python:3.9-slim
 WORKDIR /app
-COPY app.html .
-COPY server.js .
-EXPOSE 9002
-CMD ["node", "server.js"]
+COPY . .
+RUN pip install flask
+EXPOSE 5000
+CMD ["python", "app.py"]
 
